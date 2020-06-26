@@ -81,7 +81,7 @@ class CursorPaginationServiceProvider extends ServiceProvider
             })->toArray();
             $afterCursor = new Cursor($afterCursor);
 
-            return new CursorPaginator($items, $cursor, $hasAfter);
+            return new CursorPaginator($items, $afterCursor, $hasAfter);
         };
 
         // Register macros
