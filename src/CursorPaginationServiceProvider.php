@@ -66,7 +66,7 @@ class CursorPaginationServiceProvider extends ServiceProvider
             // Check if there is a next page
             if ($items->count() > $first) {
                 $items->pop();
-                $hasAfter = false;
+                $hasAfter = true;
             }
 
             // Get last item and calculate afterCursor
