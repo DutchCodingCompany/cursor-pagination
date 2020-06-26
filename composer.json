@@ -1,0 +1,57 @@
+{
+    "name": "dutchcodingcompany/cursor-pagination",
+    "description": "Cursor pagination for Laravel Lighthouse GraphQL API",
+    "keywords": [
+        "Laravel",
+        "GraphQL",
+        "cursor-pagination"
+    ],
+    "homepage": "https://github.com/dutchcodingcompany/cursor-pagination",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Marco Boers",
+            "email": "m@rcoboe.rs",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=7.2",
+        "illuminate/support": "6.*|7.*",
+        "illuminate/database": "6.*|7.*",
+        "nuwave/lighthouse": "^4.8"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^4.0",
+        "phpunit/phpunit": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "DutchCodingCompany\\CursorPagination\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "DutchCodingCompany\\CursorPagination\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "DutchCodingCompany\\CursorPagination\\CursorPaginationServiceProvider"
+            ],
+            "aliases": {
+                "CursorPagination": "DutchCodingCompany\\CursorPagination\\CursorPaginationFacade"
+            }
+        }
+    }
+}
